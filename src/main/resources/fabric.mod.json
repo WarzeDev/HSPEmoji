@@ -1,10 +1,10 @@
 {
-	"schemaVersion": 1,
-	"id": "hspemoji",
-	"version": "${version}",
-	"name": "HSP Emoji",
+  "schemaVersion": 1,
+  "id": "hspemoji",
+  "version": "${version}",
+  "name": "HSP Emoji",
 	"description": "A mod that adds discord emoji and emote support to chat.",
-	"authors": [
+  "authors": [
 		{
 			"name": "Warze",
 			"contact": {
@@ -12,25 +12,26 @@
 				"homepage": "https://warze.org/"
 			}
 		}
-	],
-	"contact": {
-		"homepage": "https://hsp.warze.org/"
-	},
-	"license": "MIT",
-	"icon": "icon.png",
-	"environment": "client",
-	"entrypoints": {
-		"client": [
-        	"net.warze.hspemoji.HSPEmoji"
-		]
-	},
-	"mixins": [
-		"emoji.mixins.json"
-	],
-	"depends": {
-		"fabricloader": ">=0.16.9",
-		"minecraft": "~1.21.4",
-		"java": ">=21",
-		"fabric-api": "*"
-	}
+  ],
+  "contact": {
+    "homepage": "https://hsp.warze.org/"
+  },
+  "license": "MIT",
+  "icon": "icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "net.warze.hspemoji.client.HspEmojiClient"
+    ]
+  },
+  "mixins": [
+    "hspemoji.mixins.json"
+  ],
+  "depends": {
+  "fabricloader": ">=0.16.10",
+    "minecraft": "~1.21.4",
+    "java": ">=21",
+    "fabric-api": "*",
+    "wynntils": "*"
+  }
 }
